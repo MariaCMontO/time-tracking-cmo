@@ -1,0 +1,240 @@
+:root {
+    --font: "Rubik", sans-serif;
+    --Purple-600: hsl(246, 80%, 60%);
+    --Orange-300: hsl(15, 100%, 70%);
+    /*(work)*/
+    --Blue-300: hsl(195, 74%, 62%);
+    /*(play)*/
+    --Pink-400: hsl(348, 100%, 68%);
+    /*(study)*/
+    --Green-400: hsl(145, 58%, 55%);
+    /*(exercise)*/
+    --Purple-700: hsl(264, 64%, 52%);
+    /*(social)*/
+    --Yellow-300: hsl(43, 84%, 65%);
+    /*(self care)*/
+    --Navy-950: hsl(226, 43%, 10%);
+    --Navy-900: hsl(235, 46%, 20%);
+    --Purple-500: hsl(235, 45%, 61%);
+    --Navy-200: hsl(236, 100%, 87%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: var(--font);
+    font-size: 1.8rem;
+    background-color: var(--Navy-950);
+}
+
+.container {
+    max-inline-size: clamp(32.7rem, 80vw, 111rem);
+    inline-size: 100%;
+    margin-inline: auto;
+    margin-block-start: clamp(6rem, 20vw, 25.3rem);
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.first-container {
+    background-color: var(--Navy-900);
+    inline-size: 100%;
+    max-block-size: clamp(20.5rem,100vh,51.6rem);
+    block-size: 100%;
+    border-radius: 2rem;
+    color: white;
+}
+
+.first-container .personal-info {
+    background-color: var(--Purple-600);
+    inline-size: 100%;
+    max-block-size: clamp(13.3rem, 50vw, 35.3rem);
+    block-size: 100%;
+    border-radius: 2rem;
+    display: grid;
+    grid-template-columns: 7rem auto;
+    grid-template-rows: repeat(2, 1fr);
+    column-gap: 1.5rem;
+    color: white;
+    padding: 3rem;
+    align-items: center;
+}
+
+.first-container .personal-info img {
+    inline-size: 7rem;
+    block-size: 7rem;
+    border-radius: 100%;
+    border: 0.2rem solid white;
+    grid-column: 1/2;
+    grid-row: 1/3;
+}
+
+.first-container .personal-info h1 {
+    font-size:clamp(2.2rem,5vw,3.6rem);
+    font-weight: 300;
+    margin-block-start: -2rem;
+}
+
+.first-container .personal-info p {
+    font-size: 1.3rem;
+    font-weight: 200;
+}
+
+.first-container .frecuence-info {
+    block-size: 7.5rem;
+    padding-inline: 2.8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.first-container .frecuence-info p {
+    font-size: 1.7rem;
+    font-weight: 300;
+    color: var(--Purple-500);
+    transition: color 0.3s ease;
+}
+
+.first-container .frecuence-info p:hover {
+    color: white;
+    font-weight: 500;
+}
+
+.card-container {
+    inline-size: 100%;
+    block-size: 16rem;
+    border-radius: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.work {
+    background-color: var(--Orange-300);
+}
+
+.play {
+    background-color: var(--Blue-300);
+}
+
+.study {
+    background-color: var(--Pink-400);
+}
+
+.exercise {
+    background-color: var(--Green-400);
+}
+
+.social {
+    background-color: var(--Purple-700);
+}
+
+.self-care {
+    background-color: var(--Yellow-300);
+}
+
+.card-container .image{
+    position: absolute;
+    right: 1rem;
+    top: -1rem;
+}
+
+.card-container .text-container {
+    inline-size: 100%;
+    /* max-block-size: clamp(12.4rem,80vw,19.8rem); */
+    block-size: 12.4rem;
+    background-color: var(--Navy-900);
+    border-radius: 2rem;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+    padding: 2.5rem;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+    position: absolute;
+    bottom: 0%;
+    overflow: hidden;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.card-container .text-container:hover {
+    background-color: hsl(235, 46%, 30%);
+}
+
+
+.card-container .text-container .current {
+    font-size: clamp(2.7rem,10vw,5.5rem);
+    font-weight: 300;
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+
+.card-container .text-container .previous {
+    color: var(--Purple-500);
+    font-size: 1.3rem;
+    grid-column: 2/3;
+    grid-row: 2/3;
+    justify-self: end;
+}
+
+.card-container .text-container .ellipsis {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    justify-self: end;
+}
+
+/* Media queries */
+@media (min-width:76.8rem){
+    .container{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        block-size: 51.7rem;
+    }
+    .first-container{
+        grid-row: 1/3;
+    }
+
+    .first-container .personal-info{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 4rem;
+    }
+
+    .first-container .personal-info img {
+        inline-size: 8.5rem;
+        block-size: 8.5rem;
+    }
+
+    .first-container .frecuence-info {
+        block-size: 16.3rem;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 2rem;
+        justify-content: center;
+    }
+    .card-container{
+        block-size: 24.3rem;
+    }
+    .card-container .text-container {
+        row-gap:1rem ;
+        block-size: 19.8rem;
+        grid-template-rows: repeat(3,1fr);
+    }
+    .card-container .text-container .previous {
+        grid-row: 3/4;
+        grid-column: 1/2;
+        justify-self: left;
+    }
+}

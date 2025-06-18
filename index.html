@@ -1,80 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+    rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
   <title>Frontend Mentor | Time tracking dashboard</title>
+  <link rel="stylesheet" href="/styles.css">
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
+
 <body>
 
-  Report for
-  Jeremy Robson
+  <main>
+    <div class="container">
 
-  Daily
-  Weekly
-  Monthly
+      <div class="first-container">
 
-  Work
-  5hrs <!-- daily -->
-  Previous - 7hrs <!-- daily -->
-  32hrs <!-- weekly -->
-  Previous - 36hrs <!-- weekly -->
-  103hrs <!-- monthly -->
-  Previous - 128hrs <!-- monthly -->
+        <div class="personal-info">
+          <img src="/images/image-jeremy.png" alt="Jeremy image">
+          <p>Report for</p>
+          <h1>Jeremy Robson</h1>
+        </div>
 
-  Play
-  1hr <!-- daily -->
-  Previous - 2hrs <!-- daily -->
-  10hrs <!-- weekly -->
-  Previous - 8hrs <!-- weekly -->
-  23hrs <!-- monthly -->
-  Previous - 29hrs <!-- monthly -->
+        <div class="frecuence-info">
+        <p>Daily</p>
+        <p>Weekly</p>
+        <p>Monthly</p>
+        </div>
 
-  Study
-  0hrs <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  4hrs <!-- weekly -->
-  Previous - 7hrs <!-- weekly -->
-  13hrs <!-- monthly -->
-  Previous - 19hrs <!-- monthly -->
+      </div>
 
-  Exercise
-  1hr <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  4hrs <!-- weekly -->
-  Previous - 5hrs <!-- weekly -->
-  11hrs <!-- monthly -->
-  Previous - 18hrs <!-- monthly -->
+      <div id="work" class="card-container work">
+        <img src="/images/icon-work.svg" alt="Icon work" class="image">
+        <div class="text-container">
+          <p>Work</p>
+          <img src="/images/icon-ellipsis.svg" alt="Icon ellipsis" class="ellipsis">
+          <p id="work-current" class="current">5hrs</p>
+          <p id="worl-previous" class="previous">Previous - 7hrs</p>
+          <p></p>
+        </div>
+      </div>
 
-  Social
-  1hr <!-- daily -->
-  Previous - 3hrs <!-- daily -->
-  5hrs <!-- weekly -->
-  Previous - 10hrs <!-- weekly -->
-  21hrs <!-- monthly -->
-  Previous - 23hrs <!-- monthly -->
+      <div id="play" class="card-container play">
+        <img src="/images/icon-play.svg" alt="Icon work" class="image">
+        <div class="text-container">
+          <p>Play</p>
+          <img src="/images/icon-ellipsis.svg" alt="Icon ellipsis" class="ellipsis">
+          <p id="play-current" class="current">1hrs</p>
+          <p id="play-previous" class="previous">Previous - 2hrs</p>
+          <p></p>
+        </div>
+      </div>
 
-  Self Care
-  0hrs <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  2hrs <!-- weekly -->
-  Previous - 2hrs <!-- weekly -->
-  7hrs <!-- monthly -->
-  Previous - 11hrs <!-- monthly -->
+      <div id="study" class="card-container study">
+        <img src="/images/icon-study.svg" alt="Icon work" class="image">
+        <div class="text-container">
+          <p>Study</p>
+          <img src="/images/icon-ellipsis.svg" alt="Icon ellipsis" class="ellipsis">
+          <p id="study-current" class="current">0hrs</p>
+          <p id="study-previous" class="previous">Previous - 1hrs</p>
+        </div>
+      </div>
 
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+      <div id="exercise" class="card-container exercise">
+        <img src="/images/icon-exercise.svg" alt="Icon work" class="image">
+        <div class="text-container">
+          <p>Exercise</p>
+          <img src="/images/icon-ellipsis.svg" alt="Icon ellipsis" class="ellipsis">
+          <p id="exercise-current" class="current">1hrs</p>
+          <p id="exercise-previous" class="previous">Previous - 1hrs</p>
+        </div>
+      </div>
+
+      <div id="social" class="card-container social">
+        <img src="/images/icon-social.svg" alt="Icon work" class="image">
+        <div class="text-container">
+          <p>Social</p>
+          <img src="/images/icon-ellipsis.svg" alt="Icon ellipsis" class="ellipsis">
+          <p id="social-current" class="current">1hrs</p>
+          <p id="social-previous" class="previous">Previous - 3hrs</p>
+        </div>
+      </div>
+
+      <div id="self-care" class="card-container self-care">
+        <img src="/images/icon-self-care.svg" alt="Icon work" class="image">
+        <div class="text-container">
+          <p class="title">Self Care</p>
+          <img src="/images/icon-ellipsis.svg" alt="Icon ellipsis" class="ellipsis">
+          <p id="self-care-current" class="current">0hrs</p>
+          <p id="self-care-previous" class="previous">Previous - 1hrs</p>
+        </div>
+      </div>
+
+
+    </div>
+  </main>
+
+
+
+  <script src="/script.js"></script>
 </body>
+
 </html>
